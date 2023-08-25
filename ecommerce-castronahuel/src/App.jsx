@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Titulo from './components/Titulo/Titulo'
-import NavBar from './components/Navbar/Navbar'
+import NavBar from './components/Navbar/NavBar'
 import ItemListContainer from './components/Footer/Footer'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import NavBar from './components/Navbar/Navbar'
+
+
 
 
 
@@ -15,7 +14,7 @@ function App() {
   const [estado, funcionCambiarEstado] = useState(0)
   const titulo = 'Bienvenidos a pepito technology'
   const subtitulo = 'Tecnología de calidad'
-  let count = 0
+  
 
   const addCount = () => {
    funcionCambiarEstado(estado + 1)

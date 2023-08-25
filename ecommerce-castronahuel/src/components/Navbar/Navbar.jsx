@@ -1,12 +1,19 @@
-import { Button, Container, Form, Nav, NavDropdown, NavBar } from "react-boostrap" 
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import CartWidget from '../CartWidget/CartWidget';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Navbar = () => {
-    return (
-      <NavBar expand="lg" className="bg-body-tertiary">
+
+function NavBar() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <NavBar.Brand href="#">Navbar scroll</NavBar.Brand>
-        <NavBar.Toggle aria-controls="navbarScroll" />
-        <NavBar.Collapse id="navbarScroll">
+        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
@@ -24,9 +31,10 @@ const Navbar = () => {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="#">
+            <CartWidget/>
             </Nav.Link>
+          
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -37,10 +45,10 @@ const Navbar = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-        </NavBar.Collapse>
+        </Navbar.Collapse>
       </Container>
-    </NavBar>
-   )
-   }
+    </Navbar>
+  )
+}
 
-   export default NavBar
+export default NavBar;
